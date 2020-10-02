@@ -1,0 +1,142 @@
+#labelTimer{
+  border-radius: 2vw;
+  border-color:#000000;
+  text-align: center;
+  font-size:2.5vh;
+  font-weight: bold;
+  display: inline-block;
+  padding:0vw;
+  margin: 0vh 0vw 0vh 0vw;
+  height: 2vh;
+  width: 100vw;
+  cursor: pointer;
+}
+
+.container{
+  
+  border:solid;
+  border-color:blue;
+  display:table;
+  
+  align-content:center;
+  text-align:center;
+
+  position:relative;  
+  width:99%;
+
+  height:5vh;
+  
+
+}
+#time{
+  /*background:white;
+  border:solid;
+  font-size: 3vw;
+  border-radius:10px;
+  border-color:#424e95;
+  padding:5px;
+  margin:10px 2px;
+  height:20vh;
+  width:10vw;*/
+  background:white;
+  border:solid;
+  border-radius: 2vw;
+  border-color:#000000;
+  text-align: center;
+  font-size: 2vh;
+  font-weight: bold;
+  display: inline-block;
+  padding:.5vw;
+  
+  margin: 1vh 1vw 1vh 1vw;
+  height: 2.5vh;
+  width: 20vw;
+  font-family:Lato;
+  
+  
+  
+}
+
+#stopTimer{
+ /*background-color: red; 
+  border: none;
+  padding:15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 3vw;
+  margin: 5px 2px;
+  cursor: pointer;
+  border-radius:50%;
+  height:15vh;*/
+  background-color: red; /* Red */
+  border:solid;
+  border-radius: 2vw;
+  border-color:#000000;
+  text-align: center;
+  font-size: 2vh;
+  font-weight: bold;
+  display: inline-block;
+  padding:.5vw;
+   margin: 1vh 1vw 1vh 1vw;
+  height: 5vh;
+  width: 20vw;
+  cursor: pointer;
+  
+}
+ #startTimer{
+/* background-color:  #4CAF50; 
+  border: none;
+  padding: 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 3vw;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 50%;
+   height:15vh;
+   margin:auto;*/
+   background-color:  #4CAF50; /* Green */
+  border:solid;
+  border-radius: 2vw;
+  border-color:#000000;
+  text-align: center;
+  font-size:2vh;
+  font-weight: bold;
+  display: inline-block;
+  padding:.5vw;
+  margin: 1vh 1vw 1vh 1vw;
+  height: 5vh;
+  width: 20vw;
+  cursor: pointer;
+}
+
+#resetTimer{
+/* background-color: yellow; 
+  border: none;
+  padding: 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 3vw;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 50%;
+  height:15vh;
+  margin:auto;*/
+   background-color: yellow; /* Yellow */
+  border:solid;
+  border-radius: 2vw;
+  border-color:#000000;
+  text-align: center;
+  font-size: 2vh;
+  font-weight: bold;
+  display: inline-block;
+  padding: .5vw;
+  margin: 1vh 1vw 1vh 1vw;
+  height: 5vh;
+  width: 20vw;
+  cursor: pointer;
+}
+

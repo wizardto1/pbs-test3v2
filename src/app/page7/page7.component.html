@@ -1,0 +1,46 @@
+<div class="header"><p><strong>#5: Sit to Stand  </strong></p>
+</div>
+<div class="info">
+<p>
+<strong>Tester: </strong>
+Stabilize a firm, 17-18 in [43-46 cm] (seat height) chair
+
+against a wall. Count the successful repetitions AND record the
+
+time. No assistive device, no assistance, demonstrate task. 
+
+</p><p>
+<strong>Client:</strong> 
+ Sit on the chair with your back against the chairback
+
+and arms folded across your chest. Stand up and sit down 5
+
+times as quickly as you can <strong>without</strong> using your hands/armrests.
+
+I will time you. 
+
+<p>
+</div>
+<app-timer></app-timer>
+<div class="options"><div class="radio-toolbar">
+
+  Completes 5 Reps in:<br>
+  <input type="radio" id="1" name="q7" value="1" [(ngModel)]="flag" (change)=radioEventHandler($event)>
+  
+  <label for="1" style="font-weight:bold; margin:1vh;">≤  12s               </label>
+  
+  <input type="radio" id="0" name="q7" value="0" [(ngModel)]="flag" (change)=radioEventHandler($event)><label for="0" style="font-weight:bold"> >12s/Unable</label><br>
+ </div>
+ <label for="steps"># of Reps: </label>
+    <input type="text" id="steps" name="steps" value="" (change)="OnInput3($event)"><br>
+  <label for="notes">Notes: </label>
+    <input type="text" id="notes" name="notes" value="" (change)="OnInput2($event)">
+
+  </div>
+  
+  
+<div class="bottom">
+         <button [routerLink]="['/results']" (click)="  EndTest()" style="background-color:red"> End Test</button>
+      <button (click)="setScore7(flag)" [disabled]="!buttonDisabled"> Next</button>
+
+ </div>

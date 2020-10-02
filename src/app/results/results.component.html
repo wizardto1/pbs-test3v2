@@ -1,0 +1,67 @@
+<div class="header">
+
+ <p> <strong>Score Report</strong></p></div>
+  
+<div class="body">
+  <div [innerHTML]="zeroend"></div>
+  <div [innerHTML]="end"></div>
+  <table style="text-align:left;">
+    <tr>
+      <th style="text-align:center;">Domain Score:</th></tr>
+      <tr>
+      <td >Quiet Stance (QS):</td><td>{{qs}}/4</td></tr>
+       <tr>
+      <td>  Sensory
+     orientation (SO):
+</td><td>{{so}}/3</td></tr>
+       <tr>
+      <td>Anticipatory
+     postural
+     adjustments (APA):
+</td><td>{{apa}}/6</td></tr>
+       <tr>
+      <td>Perturbation 
+     responses (PR):
+</td><td>{{pr}}/3</td></tr>
+       <tr>
+      <td>Stability in 
+     gait (SG):
+</td><td>{{sg}}/4</td></tr>
+<tr>
+      <td><strong>Total PBS Score:</strong>
+</td><td>{{total}}/20</td></tr>
+</table>
+  <p><strong>Summary</strong></p>
+  <table>
+    <tr>
+    <td>Tandem Stance : {{score1}}</td><td> Time: {{time1}} s</td><td> Step Leg: {{leg1}} </td><td>Notes:{{note1}}</td></tr>
+    <tr><td>Max Length Forward :{{score2}}</td><td> Step Leg: {{leg2}} </td><td> Notes: {{note2}}</td></tr>
+    <tr><td>Item 1 (QS):{{score3}}</td><td>   Time:  {{time2}} s </td><td>   Notes: {{note3}} </td></tr>
+    <tr><td>Item 2 (SO): {{score4}}</td> <td> Time:  {{time3}} s </td> <td>  Notes: {{note4}}</td></tr>
+    <tr><td>Item 3 (PR): {{score5}}</td><td>  Notes:{{note5}} </td></tr>
+    <tr><td>Item 4 (APA): {{score6}}</td><td>Time: {{time4}}</td><td>  # of Steps: {{leg3}} </td><td> Notes: {{note6}}</td></tr>
+    <tr><td>Item 5 (APA): {{score7}} </td><td> Reps: {{leg4}} </td><td>  Time: {{time5}}s </td><td> Notes: {{note7}} </td></tr>
+    <tr><td>Item 6 (SG): {{score8}}</td><td> Time: {{time6}} s</td><td>  Device: {{device1}}</td><td> Notes: {{note8}} </td></tr>
+    <tr><td>Item 7 (QS): {{score9}}</td><td> Time: {{time7}} s </td><td>  Notes: {{note9}} </td></tr>
+    <tr><td>Item 8 (APA): {{score10}}</td><td> Time: {{time8}} s </td><td>  Notes: {{note10}}</td></tr>
+    <tr><td>Item 9 (SG): {{score11}}</td><td> Device: {{device2}}</td><td>  Notes: {{note11}}  </td></tr>
+    <tr><td>Item 10 (APA): {{score12}}</td><td>Time: {{time9}}s </td><td>  Notes: {{note12}} </td></tr>
+    <tr><td>Item 11 (PR): {{score13}}</td><td>Notes: {{note13}}</td></tr>
+    <tr><td>Item 12 (QS):{{score14}}</td><td> Time: {{time10}} s </td><td>Foot: {{leg5}} </td><td>Notes: {{note14}}</td></tr>
+    <tr><td>Item 13 (SG): {{score15}}</td><td> Time: {{time11}} s</td><td> Notes: {{note15}}</td></tr>
+    <tr><td>Item 14 (SO): {{score16}}</td><td>Time: {{time12}} s </td><td>Notes:{{note16}}</td></tr>
+    <tr><td>Item 15 (SG): {{score17}}</td><td>Notes: {{note17}}</td></tr>
+    <tr><td>Item 16 (APA): {{score18}} </td><td> Step Leg: {{leg6}}</td><td>Notes: {{note18}}</td></tr>
+    <tr><td>Item 17 (APA): {{score19}}</td><td>Time: {{time13}} s</td><td> Step Leg: {{leg7}}</td><td>Notes: {{note19}}</td></tr>
+    <tr><td>Item 18 (SO): {{score20}}</td><td> Time: {{time14}} s</td><td>Device: {{device3}}</td><td>Notes:{{note20}}</td></tr>
+    <tr><td>Item 19 (QS): {{score21}}</td><td>Time: {{time15}} s</td><td>Stance: {{leg8}}</td><td>Notes:{{note21}} </td></tr>
+    <tr><td>Item 20 (PR): {{score22}} </td><td>Notes:{{note22}} </td></tr>
+
+    </table>
+</div>
+<div class="bottom">
+        
+         <button [routerLink]="['/email']"  > Email Results</button>
+      <button [routerLink]="['/home']" style="font-size:1.5vh;" (click)="reset()" > Restart (Results will be discarded)</button>
+
+ </div>

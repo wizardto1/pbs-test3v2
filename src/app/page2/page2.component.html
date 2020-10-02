@@ -1,0 +1,37 @@
+<div class="header"><p><strong>MAX STEP LENGTH FORWARD</strong></p></div>
+<div class="info">
+<strong>Tester:</strong>
+Place 2 pieces of tape, 24 in (60 cm) apart on the floor as measured by the front edge of each tape (See diagram next). Position client standing with toes at edge of tape as shown. <strong>“Able”</strong>  = client steps forward across the second tape with whole foot AND returns in 1 step without using assistive device or assistance. Demonstrate the task. Allow 2 trials, if needed. Score best trial. Client chooses which leg steps.
+
+<p>
+<strong>Client:</strong>
+Stand with feet hip width apart. Step on the tape with your toes against the front edge of the first tape. Place hands on your hips. Try to step across the second tape with your whole foot. Step forward with 1 foot and return to the start position in 1 step. 
+
+<p>
+  <img src="https://drexel.edu/~/media/Images/cnhp/Research/projects/BergsBalanceTest/MaxStepLength.ashx?la=en" style="width:60vh;height:40vh">
+</div>
+<div class="options"><div class="radio-toolbar">
+  
+      
+
+  Steps Forward:<br>
+  <input type="radio" id="1" name="q2" value="passed" [(ngModel)]="flag" (change)=radioEventHandler($event)>
+  
+  <label for="1" style="font-weight:bold; margin:1vh;">≥ 24 in (60 cm) <strong>AND</strong> returns in 1 step               </label>
+  
+  <input type="radio" id="0" name="q2" value="no" [(ngModel)]="flag" (change)=radioEventHandler($event)><label for="0" style="font-weight:bold">Unable</label><br>
+  Step Leg:<br>
+  <input type="radio" id="left" name="q2foot" value="left" [(ngModel)]="flag2" >
+  
+  <label for="left" style="font-weight:bold; margin-right:2vh;">Left</label>
+  
+  <input type="radio" id="right" name="q2foot" value="right" [(ngModel)]="flag2" ><label for="right" style="font-weight:bold">Right</label></div>
+  <label for="notes">Notes: </label>
+    <input type="text" id="notes" name="notes" value="" (change)="OnInput($event)">
+
+  </div>
+<div class="bottom">
+         <button [routerLink]="['/results']" (click)="EndTest()" style="background-color:red"> End Test</button>
+      <button  (click)="setScore2(flag);gotoPage(flag)" [disabled]="!buttonDisabled"  > Next</button>
+
+ </div>

@@ -1,0 +1,28 @@
+<div class="header"><p><strong>#20:Compensatory Stepping Correction-Backward</strong></p>
+</div>
+<div class="info">
+<p>
+<strong>Tester:</strong> Stand behind client with one hand on each scapula, ask client to lean backward (make sure there is room to step backward). Require client to lean until the shoulders and hips are behind the heels, and <strong>you are supporting the client’s weight.</strong> Release your support when the client is in place. 
+
+</p><p>
+<strong>Client:</strong> Stand with your feet shoulder width apart, arms by your sides. Keeping your back straight, lean backward against my hands, allowing me to hold your weight. When I let go, step to avoid falling. 
+<p>
+</div>
+<div class="options"><div class="radio-toolbar">
+ 
+   
+  Recovers With:<br>
+  <input type="radio" id="1" name="q3" value="1" [(ngModel)]="flag" (change)=radioEventHandler($event)>
+  
+  <label for="1" style="font-weight:bold; margin-right:2vh;"> 1 step </label>
+  
+  <input type="radio" id="0" name="q2" value="0" [(ngModel)]="flag" (change)=radioEventHandler($event)><label for="0" style="font-weight:bold">Over 1 step/Unable</label></div>
+  <label for="notes">Notes: </label>
+    <input type="text" id="notes" name="notes" value="" (change)="OnInput($event)">
+</div>
+  
+<div class="bottom">
+         <button [routerLink]="['/results']" (click)="EndTest()" style="background-color:red"> End Test</button>
+      <button [routerLink]="['/results']" (click)="setScore22(flag)" [disabled]="!buttonDisabled" > Next</button>
+
+ </div>

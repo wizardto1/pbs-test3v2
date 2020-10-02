@@ -1,0 +1,42 @@
+<div class="header"><p><strong>#17: Rapid Step Length Forward</strong></p>
+
+</div>
+<div class="info">
+<p>
+<strong>Tester:</strong>
+ Place 2 pieces of tape, 24 in (60 cm) apart on the floor as measured by the front edge of each tape (See diagram item 13). <strong>“Able”</strong> means client steps forward across the farthest tape <strong> AND </strong>returns in 1 step within 3 s. No assistive device, no assistance, demonstrate the task. Allow 2 trials, if needed. Score best trial. Client chooses which leg steps.
+
+
+
+</p><p>
+<strong>Client:</strong> Stand with feet hip width apart, step on the tape with your toes against the front edge of 1 tape. Place hands on your hips. Step forward as far as you can with 1 leg and return to the start position in 1 step. Your goal is to step just across the farthest tape as<strong> fast</strong> as possible.  
+
+
+<p>
+</div>
+<app-timer></app-timer>
+<div class="options"><div class="radio-toolbar">
+  
+  
+
+  Steps Forward:<br>
+  <input type="radio" id="1" name="q19" value="1" [(ngModel)]="flag" (change)=radioEventHandler($event)>
+  
+  <label for="1" style="font-weight:bold; margin:1vh;">≥ 24 in (60 cm) <strong>AND</strong> returns within 1 step under 3s                                  </label>
+  
+  <input type="radio" id="0" name="q18" value="0" [(ngModel)]="flag" (change)=radioEventHandler($event)><label for="0" style="font-weight:bold">Unable</label><br>
+  Step Leg:<br>
+  <input type="radio" id="left" name="q18foot" value="left" [(ngModel)]="flag2" >
+  
+  <label for="left" style="font-weight:bold; margin-right:2vh;">Left</label>
+  
+  <input type="radio" id="right" name="q18foot" value="right" [(ngModel)]="flag2" ><label for="right" style="font-weight:bold">Right</label></div>
+  <label for="steps">Notes: </label>
+    <input type="text" id="steps" name="steps" value="" (change)="OnInput2($event)">
+
+  </div>
+<div class="bottom">
+         <button [routerLink]="['/results']" (click)="EndTest()" style="background-color:red"> End Test</button>
+      <button  (click)="setScore19(flag)" [disabled]="!buttonDisabled" > Next</button>
+
+ </div>

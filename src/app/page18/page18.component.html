@@ -1,0 +1,40 @@
+<div class="header"><p><strong>#16: Max Step Length Forward</strong></p>    
+   
+
+</div>
+<div class="info">
+<p>
+<strong>Tester:</strong> Place 2 pieces of tape, 24 in (60 cm) apart on the floor as measured by the front edge of each tape (See diagram below). Position client standing with toes at edge of tape as shown. <strong>“Able”</strong> means the client steps forward across the second tape with the whole foot <strong>AND</strong> returns in 1 step, without an assistive device or assistance. Demonstrate the task. Allow 2 trials, if needed. Score best trial. Client chooses which leg steps.
+
+
+</p><p>
+<strong>Client:</strong> Stand with feet hip width apart. Step on the tape with your toes against the front edge of the first tape. Place hands on your hips. Your goal is to step just across the second tape with your whole foot. Step forward with 1 leg and return to the start position in 1 step.  
+
+<img src="https://drexel.edu/~/media/Images/cnhp/Research/projects/BergsBalanceTest/MaxStepLength.ashx?la=en" style="width:60vh;height:40vh;">
+<p>
+</div>
+<div class="options"><div class="radio-toolbar">
+  
+      
+
+  Steps Forward:<br>
+  <input type="radio" id="1" name="q19" value="1" [(ngModel)]="flag" (change)=radioEventHandler($event)>
+  
+  <label for="1" style="font-weight:bold; margin:1vh;">≥ 24 in (60 cm) <strong>AND</strong> returns within 1 step                                   </label>
+  
+  <input type="radio" id="0" name="q18" value="0" [(ngModel)]="flag" (change)=radioEventHandler($event)><label for="0" style="font-weight:bold">Unable</label><br>
+  Step Leg:<br>
+  <input type="radio" id="left" name="q18foot" value="left" [(ngModel)]="flag2" >
+  
+  <label for="left" style="font-weight:bold; margin-right:2vh;">Left</label>
+  
+  <input type="radio" id="right" name="q18foot" value="right" [(ngModel)]="flag2" ><label for="right" style="font-weight:bold">Right</label></div>
+  <label for="steps">Notes: </label>
+    <input type="text" id="steps" name="steps" value="" (change)="OnInput2($event)">
+
+  </div>
+<div class="bottom">
+         <button [routerLink]="['/results']" (click)="EndTest()" style="background-color:red"> End Test</button>
+      <button  (click)="setScore18(flag)" [disabled]="!buttonDisabled" > Next</button>
+
+ </div>

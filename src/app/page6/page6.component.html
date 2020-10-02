@@ -1,0 +1,35 @@
+<div class="header"><p><strong>#4: Stand Alternately Touch Foot on Stool/Step </strong></p>
+</div>
+<div class="info">
+<p>
+<strong>Tester:</strong> Position client facing a step/stool (8 in [20 cm] high). Count the number of successful touches <strong>AND</strong> total time to complete the touches in 20 s. No assistive device, no assistance, demonstrate the task. 
+
+</p><p>
+<strong>Client:</strong> Stand in front of the stool/step. Place each foot alternately on the step/stool. Continue until each foot touches the stool/step 4 times (8 steps). I will time you. 
+
+<p>
+</div>
+<app-timer></app-timer>
+<div class="options"><div class="radio-toolbar">
+     
+      
+
+  Completes 8 Steps in:<br>
+  <input type="radio" id="1" name="q6" value="1" [(ngModel)]="flag" (change)=radioEventHandler($event)>
+  
+  <label for="1" style="font-weight:bold; margin:1vh;">≤ 20s               </label>
+  
+  <input type="radio" id="0" name="q6" value="0" [(ngModel)]="flag" (change)=radioEventHandler($event)><label for="0" style="font-weight:bold">> 20s/Unable</label><br>
+ </div>
+ <label for="steps"># of Steps: </label>
+    <input type="text" id="steps" name="steps" value="" (change)="OnInput3($event)"><br>
+  <label for="notes">Notes: </label>
+    <input type="text" id="notes" name="notes" (change)="OnInput2($event)">
+
+  </div>
+  
+<div class="bottom">
+         <button [routerLink]="['/results']" (click)="EndTest()" style="background-color:red"> End Test</button>
+      <button (click)="setScore6(flag)" [disabled]="!buttonDisabled" > Next</button>
+
+ </div>

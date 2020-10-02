@@ -1,0 +1,36 @@
+<div class="header"><p><strong>#14: Stand Feet Shoulder Width Apart on Foam, Eyes
+
+Closed</strong> </p>
+
+   
+</div>
+<div class="info">
+<p>
+<strong>Tester:</strong> Place Tempur® foam on floor. Assist client stepping onto and then off the foam after testing. Allow 2 trials, if needed. Have client step off the foam between trials. Time the
+
+task. Score best trial.
+</p><p>
+<strong>Client:</strong> Step on the foam, place your feet shoulder width apart, hands on your hips. I will ask you to close your eyes and stand as still as you can until I say stop. I will start timing when you close your eyes.
+<p>
+</div>
+<app-timer></app-timer>
+<div class="options"> <div class="radio-toolbar">
+   
+       
+
+  Stands:<br>
+  <input type="radio" id="1" name="q16" value="1" [(ngModel)]="flag" (change)=radioEventHandler($event)>
+  
+  <label for="1" style="font-weight:bold; margin:1vh;">≥ 30s  </label>
+  
+  <input type="radio" id="0" name="q16" value="0" [(ngModel)]="flag" (change)=radioEventHandler($event)><label for="0" style="font-weight:bold">< 30s/Unable</label><br>
+ </div>
+  <label for="steps">Notes: </label>
+    <input type="text" id="steps" name="steps" value="" (change)="OnInput2($event)">
+
+  </div>
+<div class="bottom">
+        <button [routerLink]="['/results']" (click)="EndTest()" style="background-color:red"> End Test</button>
+      <button  (click)="setScore16(flag)" [disabled]="!buttonDisabled" > Next</button>
+
+ </div>

@@ -1,0 +1,37 @@
+<div class="header"><p><strong>#19: Stand on One Leg, Eyes Open</strong></p>
+
+</div>
+<div class="info">
+<p>
+<strong>Tester:</strong>No assistive device, no assistance, demonstrate task. Allow 2 trials, if needed.  Record stance leg, time task, and
+
+score best trial.
+</p><p>
+<strong>Client:</strong> Stand, hands on your hips, look straight ahead. Lift one leg off the floor without touching other leg. Stand as still as you can until I say stop (client chooses the stance leg).
+
+</div>
+<app-timer></app-timer>
+<div class="options"> <div class="radio-toolbar">
+   
+      
+      
+
+  Stands:<br>
+  <input type="radio" id="1" name="q21" value="1" [(ngModel)]="flag" (change)=radioEventHandler($event)>
+  
+  <label for="1" style="font-weight:bold; margin:1vh;">≥  20s             </label>
+  
+  <input type="radio" id="0" name="q21" value="0" [(ngModel)]="flag" (change)=radioEventHandler($event)><label for="0" style="font-weight:bold">< 20s/Unable</label><br>
+  Stance Leg:<br>
+  <input type="radio" id="left" name="q21foot" value="left" [(ngModel)]="flag2" >
+  
+  <label for="left" style="font-weight:bold; margin-right:2vh;">Left</label>
+  
+  <input type="radio" id="right" name="q21foot" value="right" [(ngModel)]="flag2" ><label for="right" style="font-weight:bold">Right</label></div>
+  <label for="notes">Notes: </label>
+    <input type="text" id="notes" name="notes" value="" (change)="OnInput2($event)">
+
+  </div>
+<div class="bottom">
+         <button [routerLink]="['/results']" (click)="EndTest()" style="background-color:red"> End Test</button>
+      <button  (click)="setScore21(flag)" [disabled]="!buttonDisabled"> Next</button>

@@ -1,0 +1,36 @@
+<div class="header"><p><strong>#2: Stand 
+Unsupported Feet Together, Eyes Closed </strong></p>
+</div>
+<div class="info">
+<p>
+<strong>Tester: </strong>
+No assistive device, no assistance, demonstrate task. Allow 2 trials, if needed. Time task. Score best trial.
+
+</p><p>
+<strong>Client:</strong> 
+Stand with your feet touching together and hands on your hips. I will ask you to close your eyes and stand as still as you can until I say stop. I will start timing when you close your eyes. 
+
+<p>
+</div>
+<app-timer></app-timer>
+<div class="options"> <div class="radio-toolbar">
+
+      
+
+  Stands:<br>
+  <input type="radio" id="1" name="q4" value="1" [(ngModel)]="flag" (change)=radioEventHandler($event)>
+  
+  <label for="1" style="font-weight:bold; margin:1vh;">≥ 30s               </label>
+  
+  <input type="radio" id="0" name="q4" value="0" [(ngModel)]="flag" (change)=radioEventHandler($event)><label for="0" style="font-weight:bold">< 30s/Unable</label><br>
+ </div>
+  <label for="steps">Notes: </label>
+    <input type="text" id="steps" name="steps" (change)="OnInput2($event)">
+
+  </div>
+  
+<div class="bottom">
+         <button [routerLink]="['/results']" (click)="EndTest()" style="background-color:red"> End Test</button>
+      <button (click)="setScore4(flag)" [disabled]="!buttonDisabled" > Next</button>
+
+ </div>

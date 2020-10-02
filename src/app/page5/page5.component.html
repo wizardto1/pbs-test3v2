@@ -1,0 +1,32 @@
+<div class="header"><p><strong>#3:In Place 
+Response-Forward</strong></p>
+</div>
+<div class="info">
+<p>
+<strong>Tester:</strong> Stand in front of client. Place 1 hand on each shoulder. Lightly push client backward until client’s anterior ankle muscles contract (causing toes to start lifting). Suddenly release hands. Do not allow pre-leaning. 
+
+</p><p>
+<strong>Client:</strong> Stand with your feet shoulder width apart, arms at your sides. Resist me pushing you backward. When I let go, keep your balance without taking a step.
+<p>
+</div>
+<div class="options"><div class="radio-toolbar">
+ 
+  
+
+  <br>
+  <input type="radio" id="1" name="q5" value="1" [(ngModel)]="flag" (change)=radioEventHandler($event)>
+  
+  <label for="1" style="font-weight:bold; margin:2vh;">Recovers stability with ankles <strong>AND </strong>no added arm / hip motion<strong> AND</strong> no
+stepping                                     </label>
+  
+  <input type="radio" id="0" name="q5" value="0" [(ngModel)]="flag" (change)=radioEventHandler($event)><label for="0" style="font-weight:bold">Unable</label></div>
+  <label for="notes">Notes: </label>
+    <input type="text" id="notes" name="notes" value="" (change)="OnInput2($event)">
+
+  </div>
+  
+<div class="bottom">
+         <button [routerLink]="['/results']" (click)="EndTest()" style="background-color:red"> End Test</button>
+      <button  (click)="setScore5(flag)" [disabled]="!buttonDisabled" > Next</button>
+
+ </div>

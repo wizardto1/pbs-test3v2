@@ -1,0 +1,35 @@
+p{
+  font-family:Lato;
+}
+.header{
+  text-align:center;
+  font-family:Lato;
+   
+  border:solid;
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+ 
+  border-color:blue;
+  height:5vh;
+}
+.body{
+  
+  font-family:Lato;
+  font-size:3vh;
+  border:solid;
+  padding:1vh;
+  
+  height:84vh;
+  border-color:blue;
+}
+button{
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 1vh 3vh;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 2vh;
+}

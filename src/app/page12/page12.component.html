@@ -1,0 +1,40 @@
+<div class="header"><p><strong>#10: Sit on Floor and 
+Stand Back Up</strong></p>
+   
+</div>
+<div class="info">
+<p>
+<strong>Tester: </strong>
+No assistive device, no assistance, demonstrate the task. Record time. Assist client to stand once you determine client cannot stand independently.
+
+
+
+</p><p>
+<strong>Client:</strong>
+Sit down on the mat on the floor and then stand back up. I will time you.
+
+
+
+<p>
+</div>
+<app-timer></app-timer>
+<div class="options"><div class="radio-toolbar">
+  
+      
+<div [innerHTML]="skip"></div>
+  Sits on the floor and stands back up:<br>
+  <input type="radio" id="1" name="q12" value="1" [(ngModel)]="flag" (change)=radioEventHandler($event)>
+  
+  <label for="1" style="font-weight:bold; margin:1vh;">≤ 120s</label>
+  
+  <input type="radio" id="0" name="q12" value="0" [(ngModel)]="flag" (change)=radioEventHandler($event)><label for="0" style="font-weight:bold"> > 120s/Unable</label><br>
+ </div>
+  <label for="steps">Notes: </label>
+    <input type="text" id="steps" name="steps" value="" (change)="OnInput2($event)">
+
+  </div>
+<div class="bottom">
+         <button [routerLink]="['/results']" (click)="EndTest()" style="background-color:red"> End Test</button>
+      <button  (click)="setScore12(flag)" [disabled]="!buttonDisabled"  > Next</button>
+
+ </div>

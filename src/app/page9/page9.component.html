@@ -1,0 +1,35 @@
+<div class="header"><p><strong>#7: Stand Feet 
+Together on Foam, 
+Eyes Open  </strong>  </p>
+</div>
+<div class="info">
+<p>
+<strong>Tester:</strong> Place Tempur®  foam on the floor. Assist client stepping onto foam, guard client and assist client off the foam after testing. Allow 2 trials, if needed. Have client step off the foam between trials. Time and
+
+score best trial.
+
+</p><p>
+<strong>Client:</strong> Step on the foam. Stand with your feet touching together; hands on your hips. Look straight ahead. Stand as still as you can until I say stop.  
+
+<p>
+</div>
+<app-timer></app-timer>
+<div class="options"> <div class="radio-toolbar">
+    
+
+  Stands:<br>
+  <input type="radio" id="1" name="q9" value="1" [(ngModel)]="flag" (change)=radioEventHandler($event)>
+  
+  <label for="1" style="font-weight:bold; margin:1vh;">≥ 30s               </label>
+  
+  <input type="radio" id="0" name="q9" value="0" [(ngModel)]="flag" (change)=radioEventHandler($event)><label for="0" style="font-weight:bold">< 30s/Unable</label><br>
+ </div>
+  <label for="steps">Notes: </label>
+    <input type="text" id="steps" name="steps" value="" (change)="OnInput2($event)">
+
+  </div>
+<div class="bottom">
+         <button [routerLink]="['/results']" (click)="EndTest()" style="background-color:red"> End Test</button>
+      <button  (click)="setScore9(flag)" [disabled]="!buttonDisabled"> Next</button>
+
+ </div>

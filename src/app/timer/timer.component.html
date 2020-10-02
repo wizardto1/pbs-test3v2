@@ -1,0 +1,8 @@
+<div id="appTimer" class="container">
+ 
+	<button id="startTimer" (click)='start()'>START</button>
+	<button id="stopTimer" (click)='stop()'>STOP</button>
+	<button id="resetTimer" (click)='reset()'>RESET</button>
+	<span id="time">{{seconds}}s</span>
+     <div style="margin-bottom:1vh;">Time Recorded (s): <input type="text"  [(ngModel)]="display"(change)="SetTime($event)"> </div> 
+</div>

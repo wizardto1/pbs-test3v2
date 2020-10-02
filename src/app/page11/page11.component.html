@@ -1,0 +1,55 @@
+<div class="header"><p><strong>#9: Step Over Obstacles (20 ft / 6 m</strong></p></div>
+<div class="info"><p>
+<strong>Tester:</strong>
+ Measure and mark a 20 ft (6 m) walkway between 2
+
+tapes. Place 2 stacked shoe boxes 10 ft away from the start.
+
+Guard client. Look for hesitation, short steps and touching the
+
+boxes during task. Demonstrate the task. Allow 1 practice trial.
+
+Indicate assistive device, if used.
+</p><p>
+<strong>Client:</strong>
+ Stand, begin walking at your usual speed. When you get
+
+to the boxes, step over them, not around them, and keep
+
+walking. Try not to touch the boxes. 
+
+</div>
+<div class="options"><div class="radio-toolbar">
+  
+      
+
+  <br>
+  <input type="radio" id="1" name="q1" value="passed" [(ngModel)]="flag" (change)=radioEventHandler($event)>
+  
+  <label for="1" style="font-weight:bold; margin:1vh;">Steps over boxes with minimal change of gait speed.           </label>
+  
+  <input type="radio" id="0" name="q1" value="no" [(ngModel)]="flag" (change)=radioEventHandler($event)><label for="0" style="font-weight:bold">Touches boxes, hesitates, slows gait, <strong>OR</strong> Unable </label><br>
+  </div>
+
+
+  
+  <div class="radio-toolbar">
+  If an assistive device is used,specify:
+  <input type="radio" id="none" name="q8d" value="none" [(ngModel)]="flag2">
+  <label for="none" style="font-weight:bold; margin:1vh;">None Used</label>
+  <input type="radio" id="cane" name="q8d" value="cane" [(ngModel)]="flag2">
+  <label for="cane" style="font-weight:bold; margin:1vh;">Cane</label>
+  <input type="radio" id="walker" name="q8d" value="walker" [(ngModel)]="flag2" ><label for="walker" style="font-weight:bold;  margin:1vh;">Walker</label><br>
+  <input type="radio" id="crutch" name="q8d" value="crutch" [(ngModel)]="flag2" >
+  <label for="crutch" style="font-weight:bold; margin:1vh;">Crutch</label>
+  <input type="radio" id="other" name="q8d" value="other" [(ngModel)]="flag2" ><label for="other" style="font-weight:bold; margin:1vh;">Other</label><br>
+  </div>
+  <label for="steps">Notes: </label>
+    <input type="text" id="steps" name="steps" value="" (change)="OnInput2($event)">
+
+  </div>
+<div class="bottom">
+        <button [routerLink]="['/results']" (click)="EndTest()" style="background-color:red"> Back</button>
+      <button  (click)="setScore11(flag)" [disabled]="!buttonDisabled"> Next</button>
+
+ </div>

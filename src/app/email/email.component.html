@@ -1,0 +1,38 @@
+<div class="header"><p><strong>Email Results</strong></p></div>
+<div class="body"> <div style="margin:5px; font-family:Lato;">
+<form action="mailto:someone@example.com?subject=Berg Balance test results" method="post" enctype="text/plain">
+Eter E-mail:<br>
+<input type="text" name="mail"><br>
+Message:<br>
+<textarea rows="25" cols="50" style="word-break: break-word; width:95% ;" >
+Score Sheet of PBS:
+Tandem Stance : {{score1}} Time: {{time1}} s Step Leg: {{leg1}} Notes:{{note1}}
+Max Length Forward :{{score2}} Step Leg: {{leg2}}  Notes: {{note2}}
+Item 1 (QS):{{score3}}   Time:  {{time2}} s    Notes: {{note3}} 
+Item 2 (SO): {{score4}} Time:  {{time3}} s   Notes: {{note4}}
+Item 3 (PR): {{score5}}  Notes:{{note5}} 
+Item 4 (APA): {{score6}} Time: {{time4}}  # of Steps: {{leg3}}  Notes: {{note6}}
+Item 5 (APA): {{score7}}  Reps: {{leg4}}   Time: {{time5}}s  Notes: {{note7}} 
+Item 6 (SG): {{score8}} Time: {{time6}} s  Device: {{device1}} Notes: {{note8}} 
+Item 7 (QS): {{score9}} Time: {{time7}} s   Notes: {{note9}} 
+Item 8 (APA): {{score10}} Time: {{time8}} s   Notes: {{note10}}
+Item 9 (SG): {{score11}} Device: {{device2}}  Notes: {{note11}}  
+Item 10 (APA): {{score12}} Time: {{time9}}s   Notes: {{note12}} 
+Item 11 (PR): {{score13}} Notes: {{note13}}
+Item 12 (QS):{{score14}} Time: {{time10}} s Foot: {{leg5}} Notes: {{note14}}
+Item 13 (SG): {{score15}} Time: {{time11}} s Notes: {{note15}}
+Item 14 (SO): {{score16}} Time: {{time12}} s Notes:{{note16}}
+Item 15 (SG): {{score17}} Notes: {{note17}}
+Item 16 (APA): {{score18}}  Step Leg: {{leg6}} Notes: {{note18}}>
+Item 17 (APA): {{score19}} Time: {{time13}} s Step Leg: {{leg7}}Notes: {{note19}}
+Item 18 (SO): {{score20}} Time: {{time14}} sDevice: {{device3}}Notes:{{note20}}
+Item 19 (QS): {{score21}} Time: {{time15}} sStance: {{leg8}}Notes:{{note21}} 
+Item 20 (PR): {{score22}} Notes:{{note22}} 
+
+</textarea>
+<br><br>
+<input type="submit" value="Send" >
+<a href="mailto:someone@example.com?subject=PBS%20Test%20Result&body=name:%0D%0Aemail :">Send</a>
+</form>
+
+    <p> Note:Does not work right now</p></div>

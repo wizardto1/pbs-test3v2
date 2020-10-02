@@ -1,0 +1,52 @@
+<div class="header"><p><strong>#6: Timed Get Up 
+and Go (TUG) (10 ft / 3 m)</strong></p>    
+
+</div>
+<div class="info">
+<p>
+<strong>Tester: </strong>
+Use standard 18 in (46 cm) chair with armrests to push from, if necessary. Stabilize the chair. Place tape on the floor 10 ft (3 m) away from front of chair. Have client sit with back against chair back. Time client from time you say “go” until client returns to the chair and buttocks touches chair seat. Use 1 practice trial. Indicate assistive device, if used.
+
+</p><p>
+<strong>Client:</strong> 
+Sit with your back against the chair back. When I say “go,” stand up from the chair, walk at your usual speed to the tape on the floor, turn around, come back and sit on the chair. I will time you.
+
+<p>
+</div>
+<app-timer></app-timer>
+<div class="options"><div class="radio-toolbar">
+   
+      
+
+  <div [innerHTML]="skip"></div> 
+  <input type="radio" id="1" name="q8" value="1" [(ngModel)]="flag" (change)=radioEventHandler($event)>
+  
+  <label for="1" style="font-weight:bold; margin:1vh;">< 12s               </label>
+  
+  <input type="radio" id="0" name="q8" value="0" [(ngModel)]="flag" (change)=radioEventHandler($event)><label for="0" style="font-weight:bold"> ≥ 12s/Unable</label><br>
+ </div>
+
+  
+
+  
+  <div class="radio-toolbar">
+  If an assistive device is used,specify:
+  <input type="radio" id="none" name="q8d" value="none" [(ngModel)]="flag2" >
+  <label for="none" style="font-weight:bold; margin:1vh;">Not used</label>
+  <input type="radio" id="cane" name="q8d" value="cane" [(ngModel)]="flag2" >
+  <label for="cane" style="font-weight:bold; margin:1vh;">Cane</label>
+  <input type="radio" id="walker" name="q8d" value="walker" [(ngModel)]="flag2" ><label for="walker" style="font-weight:bold;  margin:1vh;">Walker</label><br>
+  <input type="radio" id="crutch" name="q8d" value="crutch" [(ngModel)]="flag2" >
+  <label for="crutch" style="font-weight:bold; margin:1vh;">Crutch</label>
+  <input type="radio" id="other" name="q8d" value="other" [(ngModel)]="flag2" ><label for="other" style="font-weight:bold; margin:1vh;">Other</label><br>
+  </div>
+  <label for="notes">Notes: </label>
+    <input type="text" id="notes" name="notes" (change)="OnInput2($event)">
+  </div>
+  
+  
+<div class="bottom">
+         <button [routerLink]="['/results']" (click)="EndTest()" style="background-color:red"> End Test</button>
+      <button  (click)="setScore8(flag)" [disabled]="!buttonDisabled" > Next</button>
+
+ </div>

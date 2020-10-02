@@ -1,0 +1,35 @@
+<div class="header"><p><strong> TANDEM STANCE</strong></p></div>
+<div class="info">This score not counted in total.
+<p>
+<strong>Tester:</strong> 
+No assistive device, no assistance, demonstrate task.<br>
+Time task and record foot in front.
+</p><p>
+<strong>Client:</strong>
+Place 1 foot directly in front of the other foot, touching heel to toe. Look straight ahead, hands on your hips. Stand as still as you can, until I say stop (client chooses foot in front).
+<p>
+</div>
+<app-timer></app-timer> 
+<div class="options"><div class="radio-toolbar">
+  <input type="radio" id="1" name="q1" value="passed" [(ngModel)]="flag" (change)=radioEventHandler($event)>
+  
+  <label for="1" style="font-weight:bold; margin:1vh;">≥ 10s               </label>
+  
+  <input type="radio" id="0" name="q1" value="no" [(ngModel)]="flag" (change)=radioEventHandler($event)><label for="0" style="font-weight:bold">< 10s/Unable</label><br>
+  Front Foot:<br>
+  <input type="radio" id="left" name="q1foot" value="left" [(ngModel)]="flag2" >
+  
+  <label for="left" style="font-weight:bold; margin-right:2vh;">Left</label>
+  
+  <input type="radio" id="right" name="q1foot" value="right" [(ngModel)]="flag2" ><label for="right" style="font-weight:bold">Right</label></div>
+  <label for="steps">Notes: </label>
+    <input type="text" id="steps" name="steps" value="" (change)="OnInput2($event)">
+
+  </div>
+<div class="bottom">
+        <button [routerLink]="['/results']" (click)="EndTest()" style="background-color:red"> End Test</button>
+      <button  (click)="setScore1(flag);gotoPage(flag)" [disabled]="!buttonDisabled"> Next</button>
+
+ </div>
+
+ 

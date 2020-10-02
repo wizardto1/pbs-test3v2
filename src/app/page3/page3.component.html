@@ -1,0 +1,35 @@
+<div class="header"><p><strong>#1:Stand 
+Unsupported Feet Together, Eyes Open </strong></p>
+</div>
+<div class="info">
+<p>
+<strong>Tester: </strong>
+No assistive device, no assistance, demonstrate task.
+<br>
+Time task. 
+
+</p><p>
+<strong>Client:</strong> Stand with your feet touching together,eyes opened. Look straight ahead, hands on your hips. Stand as still as you can until I say stop.
+
+<p>
+</div>
+<app-timer></app-timer>
+<div class="options"> <div class="radio-toolbar">
+<div [innerHTML]="skip"> </div>
+
+  Stands:<br>
+  <input type="radio" id="1" name="q3" value="1" [(ngModel)]="flag" (change)=radioEventHandler($event)>
+  
+  <label for="1" style="font-weight:bold; margin-right:2vh;">≥ 30s </label>
+  
+  <input type="radio" id="0" name="q3" value="0" [(ngModel)]="flag" (change)=radioEventHandler($event)><label for="0" style="font-weight:bold"> < 30s/Unable</label></div>
+  <label for="notes">Notes: </label>
+    <input type="text" id="notes" name="notes" value="" (change)="OnInput2($event)">
+
+  </div>
+  
+<div class="bottom">
+        <button [routerLink]="['/results']" (click)="EndTest()" style="background-color:red"> End Test</button>
+      <button [routerLink]="['/page4']"  (click)="setScore3(flag)" [disabled]="!buttonDisabled" > Next</button>
+
+ </div>

@@ -1,0 +1,33 @@
+<div class="header"><p><strong>#15: Two-Footed Jump</strong></p>
+
+   
+</div>
+<div class="info">
+<p>
+<strong>Tester:</strong> Place a tape on the floor as shown. Ask client to stand on the tape with toes at the front edge of the tape and do a tandem stance. Place a second tape at the toe of client’s front foot (See diagram <strong>A</strong> below). Ask the client to jump from the first tape <strong>(B)</strong> past the second tape <strong>(C)</strong>. No assistance. Demonstrate task. Allow 1 practice trial. Guard client.
+</p><p>
+<strong>Client:</strong> Stand on the tape with your toes at the front edge. Jump forward with both feet. Your goal is to jump past the farthest tape.
+</p><p>
+
+<img src="https://drexel.edu/~/media/Images/cnhp/Research/projects/BergsBalanceTest/TwoFootJump.ashx?la=en" style="width:60vh; height:60vh;">
+<p>
+</div>
+<div class="options"> <div class="radio-toolbar">
+   
+      
+
+  <input type="radio" id="1" name="q17" value="1" [(ngModel)]="flag" (change)=radioEventHandler($event)>
+  
+  <label for="1" style="font-weight:bold; margin:1vh;">Jumps past farthest tape      </label>
+  
+  <input type="radio" id="0" name="q17" value="0" [(ngModel)]="flag" (change)=radioEventHandler($event)><label for="0" style="font-weight:bold">Unable</label><br>
+ </div>
+  <label for="steps">Notes: </label>
+    <input type="text" id="steps" name="steps" value="" (change)="OnInput2($event)">
+
+  </div>
+<div class="bottom">
+        <button [routerLink]="['/results']" (click)="EndTest()" style="background-color:red"> End Test</button>
+      <button (click)="setScore17(flag)" [disabled]="!buttonDisabled" > Next</button>
+
+ </div>

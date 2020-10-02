@@ -1,0 +1,35 @@
+<div class="header"><p><strong>#8: Rise Up on Toes </strong></p>     
+</div>
+<div class="info">
+<p>
+<strong>Tester: </strong>
+No assistive device, no assistance, demonstrate task. Time task.
+
+
+</p><p>
+<strong>Client:</strong> 
+Stand feet shoulder width apart, hands on your hips. Rise up on your toes as high as you can. Hold until I say stop. I will time you. 
+
+
+<p>
+</div>
+<app-timer></app-timer>
+<div class="options"> <div class="radio-toolbar">
+   
+
+  Stands:<br>
+  <input type="radio" id="1" name="q10" value="1" [(ngModel)]="flag" (change)=radioEventHandler($event)>
+  
+  <label for="1" style="font-weight:bold; margin:1vh;">≥ 3s               </label>
+  
+  <input type="radio" id="0" name="q10" value="0" [(ngModel)]="flag" (change)=radioEventHandler($event)><label for="0" style="font-weight:bold">< 3s/Unable</label><br>
+ </div>
+  <label for="steps">Notes: </label>
+    <input type="text" id="steps" name="steps" value="" (change)="OnInput2($event)">
+
+  </div>
+<div class="bottom">
+         <button [routerLink]="['/results']" (click)="EndTest()" style="background-color:red"> End Test</button>
+      <button (click)="setScore10(flag)" [disabled]="!buttonDisabled"> Next</button>
+
+ </div>

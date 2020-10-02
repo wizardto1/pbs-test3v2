@@ -1,0 +1,54 @@
+<div class="header"><p><strong>#18: Gait with Eyes Closed (20 ft /6 m)</strong></p>
+   
+
+</div>
+<div class="info">
+<p>
+<strong>Tester:</strong> Measure and mark a 20 ft (6 m) walkway between 2 tapes. Ask the client to walk with eyes closed. Guard client. Watch for eyes opening and deviating from center of walkway. Demonstrate the task. Allow 1 practice trial. Time task. Indicate assistive device, if used. 
+
+
+</p><p>
+<strong>Client:
+</strong> Stand, toes against the tape. I will ask you to walk forward at your usual speed from here to the farthest tape with your eyes closed. I will walk with you. Close your eyes and walk as straight as you can until I say stop. I will start timing when you close your eyes and begin walking.
+
+
+
+<p>
+</div>
+<app-timer></app-timer>
+<div class="options"> <div class="radio-toolbar">
+   
+      
+
+  Walks in:<br>
+  <input type="radio" id="1" name="q20" value="1" [(ngModel)]="flag" (change)=radioEventHandler($event)>
+  
+  <label for="1" style="font-weight:bold; margin:1vh;">≤ 7 s with no imbalance <strong>AND</strong> ≤ 6 in (15 cm) max deviation from center of walkway                                                      </label>
+  
+  <input type="radio" id="0" name="q20" value="0" [(ngModel)]="flag" (change)=radioEventHandler($event)><label for="0" style="font-weight:bold"> 
+Unable                              
+</label><br>
+ </div>
+
+
+  
+  <div class="radio-toolbar">
+  If an assistive device is used,specify:
+   <input type="radio" id="none" name="q20d" value="none" [(ngModel)]="flag2" >
+  <label for="none" style="font-weight:bold; margin:1vh;">None Used</label>
+  <input type="radio" id="cane" name="q20d" value="cane" [(ngModel)]="flag2" >
+  <label for="cane" style="font-weight:bold; margin:1vh;">Cane</label>
+  <input type="radio" id="walker" name="q20d" value="walker" [(ngModel)]="flag2" ><label for="walker" style="font-weight:bold;  margin:1vh;">Walker</label><br>
+  <input type="radio" id="crutch" name="q20d" value="crutch" [(ngModel)]="flag2" >
+  <label for="crutch" style="font-weight:bold; margin:1vh;">Crutch</label>
+  <input type="radio" id="other" name="q20d" value="other" [(ngModel)]="flag2" ><label for="other" style="font-weight:bold; margin:1vh;">Other</label><br>
+  </div>
+  <label for="notes">Notes: </label>
+    <input type="text" id="notes" name="notes" value="" (change)="OnInput2($event)">
+  </div>
+  
+<div class="bottom">
+         <button [routerLink]="['/results']" (click)="EndTest()" style="background-color:red"> End Test</button>
+      <button (click)="setScore20(flag)" [disabled]="!buttonDisabled"> Next</button>
+
+ </div>
