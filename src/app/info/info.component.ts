@@ -8,12 +8,15 @@ import { ScoresService } from '../scores.service';
 })
 export class InfoComponent implements OnInit {
 today= new Date();
+name;
+examiner;
+testnum;
   jstoday = '';
   testnumber:number
   constructor(private scoresService: ScoresService) {this.jstoday = formatDate(this.today, 'MM-dd-yyyy hh:mm ', 'en-US'); }
 
   ngOnInit() {
-    this.testnumber=this.scoresService.getTest()
+    
   }
 
 }

@@ -97,7 +97,32 @@ export class ScoresService {
   leg6:string="-";
   leg7:string="-";
   leg8:string="-";
-  test:number=1;
+  test:string;
+  name:string;
+  examiner:string;
+  date;
+  setName(name){
+    this.name=name
+  }
+  getName(){
+    return this.name
+  }
+  setExaminer(examiner){
+    this.examiner=examiner
+  }
+  getExaminer(){
+    return this.examiner
+  }
+  setDate(date){
+    this.date=date
+  }
+  getDate(){
+    return this.date
+  }
+  setTest(test){
+    this.test=test
+  }
+  
   getTest(){
     return this.test
   }
@@ -605,6 +630,9 @@ setnote19(note){this.note19=note}
   this.zeroend=false;
   this.oneskip=false;
   this.twoskip=false;
+  this.name=''
+  this.examiner=''
+  this.test=
   return
   }
 

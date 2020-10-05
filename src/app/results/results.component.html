@@ -69,7 +69,7 @@
 </div>
 <div class="bottom">
         <button [routerLink]="['/home']" style="font-size:1.5vh;background-color:red;" (click)="reset()" > Restart (Results will be discarded)</button>
-         <button ><a href="mailto:{{email}}?subject=PBS%20Test%20Result&body={{message}}">Email Results</a></button>
+         <button ><a href="mailto:{{email}}?subject=PBS%20Test%20Result&body={{message}}{{addnote}}">Email Results</a></button>
      
 
  </div>

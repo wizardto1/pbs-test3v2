@@ -181,8 +181,18 @@ note9="-";
       if (this.scoresService.GetEnd()==true){
         this.end='<p class="warning">TEST ENDED PREMATURELY</p>';
       }
-      this.message=`Score Sheet for PBS:%0D%0ATandem Stance : ${this.score1} Time: ${this.time1} s Step Leg: ${this.leg1} Notes:${this.note1} %0D%0A
-      Max Length Forward :${this.score2} Step Leg: ${this.leg2}  Notes: ${this.note2}
+      this.addnote="";
+      this.message=`Score Sheet for PBS:%0D%0A
+Domain Score:%0D%0A
+Quiet Stance (QS):  ${this.qs}/4%0D%0A
+Sensory orientation (SO):${this.so}/3%0D%0A
+Anticipatory postural adjustments (APA):${this.apa}/6%0D%0A
+Perturbation responses (PR):${this.pr}/3%0D%0A
+Stability in gait (SG):${this.sg}/4%0D%0A%0D%0A
+Total PBS Score:${this.total}/20%0D%0A%0D%0A
+Summary:%0D%0A
+Tandem Stance : ${this.score1} Time: ${this.time1} s Step Leg: ${this.leg1} Notes:${this.note1} %0D%0A
+Max Length Forward :${this.score2} Step Leg: ${this.leg2}  Notes: ${this.note2}%0D%0A
 Item 1 (QS):${this.score3}   Time:  ${this.time2} s    Notes: ${this.note3}%0D%0A
 Item 2 (SO): ${this.score4} Time:  ${this.time3} s   Notes: ${this.note4}%0D%0A
 Item 3 (PR): ${this.score5}  Notes:${this.note5}%0D%0A 
