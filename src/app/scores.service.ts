@@ -98,9 +98,9 @@ export class ScoresService {
   leg7:string="-";
   leg8:string="-";
   test:string;
-  name:string;
-  examiner:string;
-  date;
+  name:string='-';
+  examiner:string='-';
+  date='-';
   setName(name){
     this.name=name
   }
