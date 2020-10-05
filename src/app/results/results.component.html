@@ -2,7 +2,7 @@
 
  <p> <strong>Score Report</strong></p></div>
   
-<div class="body">
+<div class="info">
   <div [innerHTML]="zeroend"></div>
   <div [innerHTML]="end"></div>
   <table style="text-align:left;">
@@ -59,9 +59,17 @@
 
     </table>
 </div>
+<div class="options">
+  <strong>Want to email your results?</strong><br>
+  Send to:<br>
+<input type="text" id="email" name="email" [(ngModel)]="email"> 
+<br><br>
+  Additional Notes:<br>
+<input type="text" id="note" name="note" [(ngModel)]="addnote" style="height:10vh; width:50vh;"> 
+</div>
 <div class="bottom">
-        
-         <button [routerLink]="['/email']"  > Email Results</button>
-      <button [routerLink]="['/home']" style="font-size:1.5vh;" (click)="reset()" > Restart (Results will be discarded)</button>
+        <button [routerLink]="['/home']" style="font-size:1.5vh;background-color:red;" (click)="reset()" > Restart (Results will be discarded)</button>
+         <button ><a href="mailto:{{email}}?subject=PBS%20Test%20Result&body={{message}}">Email Results</a></button>
+     
 
  </div>

@@ -10,7 +10,9 @@ import { TimeService } from '../time.service';
    encapsulation: ViewEncapsulation.None,
 })
 export class ResultsComponent implements OnInit {
-  
+  email;
+  message;
+  addnote;
   zeroend:string;
   end:string;
   qs=0;
@@ -179,6 +181,29 @@ note9="-";
       if (this.scoresService.GetEnd()==true){
         this.end='<p class="warning">TEST ENDED PREMATURELY</p>';
       }
+      this.message=`Score Sheet for PBS:%0D%0ATandem Stance : ${this.score1} Time: ${this.time1} s Step Leg: ${this.leg1} Notes:${this.note1} %0D%0A
+      Max Length Forward :${this.score2} Step Leg: ${this.leg2}  Notes: ${this.note2}
+Item 1 (QS):${this.score3}   Time:  ${this.time2} s    Notes: ${this.note3}%0D%0A
+Item 2 (SO): ${this.score4} Time:  ${this.time3} s   Notes: ${this.note4}%0D%0A
+Item 3 (PR): ${this.score5}  Notes:${this.note5}%0D%0A 
+Item 4 (APA): ${this.score6} Time: ${this.time4}  # of Steps: ${this.leg3} Notes: ${this.note6}%0D%0A
+Item 5 (APA): ${this.score7}  Reps: ${this.leg4}   Time: ${this.time5} s  Notes: ${this.note7}%0D%0A 
+Item 6 (SG): ${this.score8} Time: ${this.time6} s  Device: ${this.device1} Notes: ${this.note8}%0D%0A 
+Item 7 (QS): ${this.score9} Time: ${this.time7} s   Notes: ${this.note9}%0D%0A
+Item 8 (APA): ${this.score10} Time: ${this.time8} s   Notes: ${this.note10}%0D%0A
+Item 9 (SG): ${this.score11} Device: ${this.device2}  Notes: ${this.note11}%0D%0A  
+Item 10 (APA): ${this.score12} Time: ${this.time9} s   Notes: ${this.note12}%0D%0A
+Item 11 (PR): ${this.score13} Notes: ${this.note13}%0D%0A
+Item 12 (QS):${this.score14} Time: ${this.time10} s Foot: ${this.leg5} Notes: ${this.note14}%0D%0A
+Item 13 (SG): ${this.score15} Time: ${this.time11} s Notes: ${this.note15}%0D%0A
+Item 14 (SO): ${this.score16} Time: ${this.time12} s Notes:${this.note16}%0D%0A
+Item 15 (SG): ${this.score17} Notes: ${this.note17}%0D%0A
+Item 16 (APA): ${this.score18}  Step Leg: ${this.leg6} Notes: ${this.note18}%0D%0A
+Item 17 (APA): ${this.score19} Time: ${this.time13} s Step Leg: ${this.leg7} Notes: ${this.note19}%0D%0A
+Item 18 (SO): ${this.score20} Time: ${this.time14} s Device: ${this.device3} Notes:${this.note20}%0D%0A
+Item 19 (QS): ${this.score21} Time: ${this.time15} s Stance: ${this.leg8} Notes:${this.note21}%0D%0A 
+Item 20 (PR): ${this.score22} Notes:${this.note22}%0D%0A
+Additional Notes:%0D%0A`;
 
   }
 

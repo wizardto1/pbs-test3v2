@@ -171,7 +171,7 @@ note9="-";
       this.time13=this.scoresService.gettime13();
       this.time14=this.scoresService.gettime14();
       this.time15=this.scoresService.gettime15();
-      this.message=`Score Sheet for PBS:\nTandem Stance : ${this.score1} Time: ${this.time1} s Step Leg: ${this.leg1} Notes:${this.note1}\nMax Length Forward :${this.score2} Step Leg: ${this.leg2}  Notes: ${this.note2}
+      this.message=`Score Sheet for PBS:\nTandem Stance : ${this.score1} Time: ${this.time1} s Step Leg: ${this.leg1} Notes:${this.note1} %0D%0A \n Max Length Forward :${this.score2} Step Leg: ${this.leg2}  Notes: ${this.note2}
 Item 1 (QS):${this.score3}   Time:  ${this.time2} s    Notes: ${this.note3}\n
 Item 2 (SO): ${this.score4} Time:  ${this.time3} s   Notes: ${this.note4}\n
 Item 3 (PR): ${this.score5}  Notes:${this.note5}\n 
