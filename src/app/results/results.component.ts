@@ -92,6 +92,10 @@ note9="-";
   note20="-";
   note21="-";
   note22="-";
+  name="-";
+  examiner="-";
+  test="-";
+  date="-";
   
   constructor(private scoresService: ScoresService, private timeService:TimeService){ }
   reset(){
@@ -182,7 +186,15 @@ note9="-";
         this.end='<p class="warning">TEST ENDED PREMATURELY</p>';
       }
       this.addnote="";
+      this.name=this.scoresService.getName();
+      this.test=this.scoresService.getTest();
+      this.examiner=this.scoresService.getExaminer();
+      this.date=this.scoresService.getDate();
       this.message=`Score Sheet for PBS:%0D%0A
+Name:${this.name}%0D%0A
+Examiner:${this.examiner}%0D%0A
+Date:${this.date}%0D%0A
+Test:${this.test}%0D%0A%0D%0A
 Domain Score:%0D%0A
 Quiet Stance (QS):  ${this.qs}/4%0D%0A
 Sensory orientation (SO):${this.so}/3%0D%0A

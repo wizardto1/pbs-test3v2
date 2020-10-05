@@ -18,5 +18,11 @@ testnum;
   ngOnInit() {
     
   }
+  SetParams(){
+    this.scoresService.setName(this.name)
+    this.scoresService.setExaminer(this.examiner)
+    this.scoresService.setTest(this.testnum)
+    this.scoresService.setDate(this.jstoday)
+  }
 
 }

@@ -632,7 +632,7 @@ setnote19(note){this.note19=note}
   this.twoskip=false;
   this.name=''
   this.examiner=''
-  this.test=
+  this.test=''
   return
   }
 
