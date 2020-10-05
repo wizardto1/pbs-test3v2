@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ScoresService } from '../scores.service';
 import { TimeService } from '../time.service';
 
+
 @Component({
   selector: 'app-email',
   templateUrl: './email.component.html',
@@ -85,6 +86,7 @@ note9="-";
   note20="-";
   note21="-";
   note22="-";
+  message;
   
   constructor(private scoresService: ScoresService, private timeService:TimeService){ }
   reset(){

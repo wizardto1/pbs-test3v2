@@ -1,10 +1,8 @@
 <div class="header"><p><strong>Email Results</strong></p></div>
 <div class="body"> <div style="margin:5px; font-family:Lato;">
 <form action="mailto:someone@example.com?subject=Berg Balance test results" method="post" enctype="text/plain">
-Eter E-mail:<br>
-<input type="text" name="mail"><br>
 Message:<br>
-<textarea rows="25" cols="50" style="word-break: break-word; width:95% ;" >
+<textarea rows="25" cols="50" style="word-break: break-word; width:95% ;" [(ng-model)]="message">
 Score Sheet of PBS:
 Tandem Stance : {{score1}} Time: {{time1}} s Step Leg: {{leg1}} Notes:{{note1}}
 Max Length Forward :{{score2}} Step Leg: {{leg2}}  Notes: {{note2}}
@@ -23,7 +21,7 @@ Item 12 (QS):{{score14}} Time: {{time10}} s Foot: {{leg5}} Notes: {{note14}}
 Item 13 (SG): {{score15}} Time: {{time11}} s Notes: {{note15}}
 Item 14 (SO): {{score16}} Time: {{time12}} s Notes:{{note16}}
 Item 15 (SG): {{score17}} Notes: {{note17}}
-Item 16 (APA): {{score18}}  Step Leg: {{leg6}} Notes: {{note18}}>
+Item 16 (APA): {{score18}}  Step Leg: {{leg6}} Notes: {{note18}}
 Item 17 (APA): {{score19}} Time: {{time13}} s Step Leg: {{leg7}}Notes: {{note19}}
 Item 18 (SO): {{score20}} Time: {{time14}} sDevice: {{device3}}Notes:{{note20}}
 Item 19 (QS): {{score21}} Time: {{time15}} sStance: {{leg8}}Notes:{{note21}} 
@@ -31,8 +29,15 @@ Item 20 (PR): {{score22}} Notes:{{note22}}
 
 </textarea>
 <br><br>
-<input type="submit" value="Send" >
-<a href="mailto:someone@example.com?subject=PBS%20Test%20Result&body=name:%0D%0Aemail :">Send</a>
+
+<button >
+<a href="mailto:someone@example.com?subject=PBS%20Test%20Result&body={{message}}">Send</a></button>
 </form>
 
     <p> Note:Does not work right now</p></div>
+
+    </div>
+ <div class="header"style="border-top:0; border-bottom:solid; border-bottom-color:blue;">
+        <button [routerLink]="['/results']">
+      Go Back
+    </button>
