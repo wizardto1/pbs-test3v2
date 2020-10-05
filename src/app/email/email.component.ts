@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ScoresService } from '../scores.service';
 import { TimeService } from '../time.service';
-
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-email',
@@ -86,7 +86,7 @@ note9="-";
   note20="-";
   note21="-";
   note22="-";
-  message;
+  message:string="Score Sheet for PBS:\nTandem Stance : {{score1}} Time: {{time1}} s Step Leg: {{leg1}} Notes:{{note1}}\n";
   
   constructor(private scoresService: ScoresService, private timeService:TimeService){ }
   reset(){
@@ -170,6 +170,7 @@ note9="-";
       this.time13=this.scoresService.gettime13();
       this.time14=this.scoresService.gettime14();
       this.time15=this.scoresService.gettime15();
+      this.message=;
 
   }
 

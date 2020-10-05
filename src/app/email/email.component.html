@@ -2,7 +2,7 @@
 <div class="body"> <div style="margin:5px; font-family:Lato;">
 <form action="mailto:someone@example.com?subject=Berg Balance test results" method="post" enctype="text/plain">
 Message:<br>
-<textarea rows="25" cols="50" style="word-break: break-word; width:95% ;" [(ng-model)]="message">
+<textarea rows="25" cols="50" name="message" [(ngModel)]="message" style="word-break: break-word; width:95% ;" >
 Score Sheet of PBS:
 Tandem Stance : {{score1}} Time: {{time1}} s Step Leg: {{leg1}} Notes:{{note1}}
 Max Length Forward :{{score2}} Step Leg: {{leg2}}  Notes: {{note2}}
