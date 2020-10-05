@@ -23,6 +23,7 @@ p{
   
   height:84vh;
   border-color:blue;
+  overflow-x:hidden;
 }
 button{
   background-color: #4CAF50; /* Green */

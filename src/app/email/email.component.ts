@@ -86,7 +86,8 @@ note9="-";
   note20="-";
   note21="-";
   note22="-";
-  message:string="Score Sheet for PBS:\nTandem Stance : {{score1}} Time: {{time1}} s Step Leg: {{leg1}} Notes:{{note1}}\n";
+  email;
+  message;
   
   constructor(private scoresService: ScoresService, private timeService:TimeService){ }
   reset(){
@@ -170,8 +171,13 @@ note9="-";
       this.time13=this.scoresService.gettime13();
       this.time14=this.scoresService.gettime14();
       this.time15=this.scoresService.gettime15();
-      this.message=;
+      this.message=`Score Sheet for PBS:\nTandem Stance : ${this.score1} Time: ${this.time1} s Step Leg: ${this.leg1} Notes:${this.note1}\n`;
 
   }
+  SaveEmail(){
+    console.log(this.email)
+  }
+  SaveMessage(){
 
+  }
 }
